@@ -20,7 +20,7 @@ function draw(){
     count = (count + speed + 1) % cycle;
   }
   // BLANK[1] 1周期の前半は size が大きくなり、後半は小さくなる
-  if (count < cycle/2) {
+  if (count > cycle/2) {
     size = 50 + cycle - count; 
   } else {
     size = 50 + count;
