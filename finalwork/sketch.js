@@ -83,7 +83,7 @@ function startgame() {
   gamestate = "playing";
   mistakes = 0;
   score = 0;
-  gameover = false;
+  
 
   shapes = [];
 
