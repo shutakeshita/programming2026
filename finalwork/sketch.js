@@ -125,7 +125,7 @@ function drawgamescreen() {
   for ( let shape of shapes) {
     let errortype = geterrortype(shape.id);
 
-    drawshape(shape.type, shape.x, shape.y, shape.size, shape.color);
+    drawshape(shape.type, shape.x, shape.y, shape.size, shape.color); //タイプミス(AIを使って直しました)　shape,size→shape.size
 
     let rtype = shape.type;
     let rcolor = shape.color;
@@ -156,7 +156,7 @@ function drawresult() {
   fill(255);
   textAlign(CENTER);
   textSize(22);
-  text("SCORE: " + score, width / 2, 70);
+  text("SCORE: " + score, width / 2, 70); //ミス(AIを使って直しました)　+ "score",→ + score,
   text("ENTERキーを押して再挑戦!", width / 2, 140);
 
 }
@@ -201,7 +201,7 @@ function drawshape(type,x,y,size,shapecolor) {
   
 }
 
-function mousePressed() {
+function mousePressed() { //タイプミス(AIを使って直しました)　mousepressed→mousePressed
   
   if (gamestate !== "playing") {
     return;
@@ -277,12 +277,12 @@ function drawfb() {
   if (gamestate !== "playing" || millis() > fbUntil) return;
 
   fill(fbcolor);
-  noStroke();
+  noStroke(); //タイプミス(AIを使って直しました)　nostroke→noStroke
   textAlign(CENTER);
   textSize(22);
 
-  let x = constrain(fbX, 100, width-100);
-  let y = constrain(fbY-25, 100, height-30);
+  let x = constrain(fbX, 100, width-100); //タイプミス(AIを使って直しました)　fbx→fbX
+  let y = constrain(fbY-25, 100, height-30); //タイプミス(AIを使って直しました)　fby→fbY
 
   text(fbmessage, x,y);
 }
